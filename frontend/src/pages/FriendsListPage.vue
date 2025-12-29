@@ -1,7 +1,7 @@
 <template>
   <a-card class="panel-card" :bordered="false">
     <div class="card-title-row">
-      <a-typography-title :level="4" class="section-title">Danh sách bạn bè</a-typography-title>
+    <a-typography-title :level="4" class="section-title">Friends List</a-typography-title>
       <a-button type="link" @click="state.fetchFriends">Refresh</a-button>
     </div>
     <a-skeleton v-if="state.loadingFriends" active :paragraph="{ rows: 4 }" />

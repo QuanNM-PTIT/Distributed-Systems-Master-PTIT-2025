@@ -29,4 +29,36 @@
 - Apply SQL schema from `backend/migrations/001_init.sql`.
 - Start server: `go run ./backend/cmd/server`
 
-Frontend will be added in a later milestone.
+## Start Project (Step-by-step)
+
+### 1. MySQL setup
+- Create database (example): `CREATE DATABASE p2p_chat;`
+- Apply schema from `backend/migrations/001_init.sql`
+- Update `DB_DSN` in `.env` or environment variables (example below)
+
+Example `DB_DSN`:
+```
+root:password@tcp(127.0.0.1:3306)/p2p_chat?parseTime=true
+```
+
+### 2. Backend (Go + Gin)
+```
+cd backend
+go mod download
+go mod tidy
+export DB_DSN="root:password@tcp(127.0.0.1:3306)/p2p_chat?parseTime=true"
+export JWT_SECRET="change_me"
+export ALLOWED_ORIGIN="http://localhost:5173"
+go run ./cmd/server
+```
+
+### 3. Frontend (Vue 3 + Vite)
+```
+cd frontend
+npm install
+npm run dev
+```
+
+Open:
+- Frontend: `http://localhost:5173`
+- Backend: `http://localhost:8080`

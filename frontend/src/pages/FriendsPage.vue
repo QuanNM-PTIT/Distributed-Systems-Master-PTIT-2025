@@ -53,7 +53,7 @@
         <a-col :xs="24" :lg="12">
           <a-card class="panel-card" :bordered="false">
             <div class="card-title-row">
-              <a-typography-title :level="4" class="section-title">Lời mời kết bạn</a-typography-title>
+              <a-typography-title :level="4" class="section-title">Friend Requests</a-typography-title>
               <a-button type="link" @click="fetchRequests">Refresh</a-button>
             </div>
             <a-skeleton v-if="loadingRequests" active :paragraph="{ rows: 3 }" />
@@ -74,7 +74,7 @@
         <a-col :xs="24" :lg="12">
           <a-card class="panel-card" :bordered="false">
             <div class="card-title-row">
-              <a-typography-title :level="4" class="section-title">Danh sách bạn bè</a-typography-title>
+              <a-typography-title :level="4" class="section-title">Friends List</a-typography-title>
               <a-button type="link" @click="fetchFriends">Refresh</a-button>
             </div>
             <a-skeleton v-if="loadingFriends" active :paragraph="{ rows: 4 }" />
