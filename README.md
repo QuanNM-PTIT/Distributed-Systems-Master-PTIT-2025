@@ -1,5 +1,10 @@
 # P2P Chat App (Hybrid P2P)
 
+## Members:
+- B25CHHT007 - Thạch Tuấn Cường
+- B25CHHT059 - Vũ Anh Tuấn
+- B25CHHT048 - Nguyễn Mạnh Quân
+
 ## Architecture Summary
 - Hybrid P2P: server handles auth, friends, groups, presence, and WebRTC signaling; data (chat/file) goes P2P via WebRTC DataChannel.
 - Backend: Golang (Gin) + MySQL for identity, social graph, groups, and signaling authorization.
